@@ -1,0 +1,74 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #3464AE;
+  background-image: url('https://wallpaperaccess.com/full/188646.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+
+  padding: 1rem 1.5rem;
+}
+
+.header__left {
+  flex: 1;
+}
+
+.header__left h2 {
+  letter-spacing: -1px;
+  font-size: 2rem;
+  color: #FFCB08;
+}
+
+.header__right {
+  flex: 1;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__right a {
+  text-decoration: none;
+  color: #ec5c61;
+
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.header__right a:hover {
+  color: #ED1C24;
+}
+
+.active__link {
+  color: #ED1C24 !important;
+}
+
+.header__right span {
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  .header__left {
+    display: none;
+  }
+
+  .header__right {
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
