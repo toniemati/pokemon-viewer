@@ -4,10 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation();
-
   const checkPath = (path) => location.pathname === path;
 
-  console.log('value: ', checkPath('/'));
 
   return (
     <div className="header">
@@ -16,9 +14,9 @@ const Header = () => {
       </div>
 
       <div className="header__right">
-        <Link className={ checkPath('/') && 'active__link'} to="/">Home</Link>
+        <Link className={ checkPath('/') ? 'active__link' : ''} to="/">Home</Link>
         <span> | </span>
-        <Link className={ checkPath('/about') && 'active__link' } to="about">About</Link>
+        <Link className={ checkPath('/about') ? 'active__link' : '' } to="about">About</Link>
       </div>
     </div>
   )
