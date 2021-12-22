@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const pokemonSlice = createSlice({
-  name: 'pokemon',
+  name: 'pokemons',
   initialState: {
     value: []
   },
   reducers: {
     setPokemons: (state, action) => {
       state.value = action.payload;
-    }
+    },
   }
 });
 

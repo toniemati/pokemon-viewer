@@ -7,6 +7,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { setPokemons } from './store/modules/pokemonSlice';
 import { useEffect } from 'react';
+import Details from './views/Details/Details';
 
 function App() {
   const dispatch = useDispatch();
@@ -27,7 +28,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/details/:name" element={<Details />} />
       </Routes>
     </div>
   );
