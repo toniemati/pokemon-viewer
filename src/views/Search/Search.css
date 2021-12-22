@@ -1,0 +1,25 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+  
+  color: #efefef;
+
+  margin: 2rem 0 5rem;
+}
+
+.search input {
+  font-size: 1.2rem;
+  text-align: center;
+  
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  
+  padding: 1rem;
+  margin-top: 1rem;
+    
+}

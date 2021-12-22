@@ -1,22 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import './Home.css';
 
 const Home = () => {
-  const pokemons = useSelector((state) => state.pokemon.value);
-  
   return (
-    <div>
-      <h1>this is home page</h1>
-      <div>
-        {
-          pokemons.map((pokemon) => (
-            <p key={pokemon.name}>
-              <Link to={`/details/${pokemon.name}`}>{pokemon.name}</Link>
-            </p>
-          ))
-        }
-      </div>
+    <div className="home">
+      <h2>this is home page</h2>
+      <p>go to search and find your favorite pokemon 🌞</p>
     </div>
   )
 }

@@ -7,11 +7,7 @@
   justify-content: space-between;
   align-items: center;
 
-  background: #3464AE;
-  background-image: url('https://wallpaperaccess.com/full/188646.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  image-rendering: pixelated;
+  background: rgba(2,19,38,1);
 
   padding: 1rem 1.5rem;
 }
@@ -37,20 +33,18 @@
 
 .header__right a {
   text-decoration: none;
-  color: #ec5c61;
+  color: #eeddaa;
 
   font-weight: bold;
   font-size: 1.1rem;
 
-  transition: color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.header__right a:hover {
-  color: #ED1C24;
-}
-
+.header__right a:hover,
 .active__link {
-  color: #ED1C24 !important;
+  color: #FFCB08 !important;
+  font-size: 1.2rem !important;
 }
 
 .header__right span {
