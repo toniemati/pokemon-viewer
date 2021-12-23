@@ -3,7 +3,8 @@ import axios from 'axios';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setPokemons } from './store/modules/pokemonSlice';
+import { setPokemons } from './store/modules/pokemonsSlice';
+import { setTypes } from './store/modules/typesSlice';
 import Header from './components/Header/Header';
 import Home from './views/Home/Home';
 import Search from './views/Search/Search';
@@ -14,12 +15,18 @@ function App() {
   const dispatch = useDispatch();
 
   const getPokemons = async () => {
-    const { data: { results }} = await axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1200');
+    const { data: { results } } = await axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1200');
     dispatch(setPokemons(results));
   };
 
+  const getTypes = async () => {
+    const { data: { results } } = await axios.get('https://pokeapi.co/api/v2/type');
+    dispatch(setTypes(results));
+  }
+
   useEffect(() => {
     getPokemons();
+    getTypes();
   }, []);
 
   return (

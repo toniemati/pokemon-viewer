@@ -11,6 +11,18 @@
   margin: 2rem 0 5rem;
 }
 
+.search select {
+  font-size: 1.1rem;
+  text-align: center;
+  
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .search input {
   font-size: 1.2rem;
   text-align: center;
@@ -21,5 +33,32 @@
   
   padding: 1rem;
   margin-top: 1rem;
-    
+}
+
+.search__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  width: 60%;
+  padding: 1rem 3rem;
+  gap: 2rem 1rem;
+}
+
+.search__listItem {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.search__listItem a {
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .search__list {
+    width: 100%;
+    gap: 1rem 0.5rem;
+  }
 }

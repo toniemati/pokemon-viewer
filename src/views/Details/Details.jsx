@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 
 const Details = () => {
   const { name } = useParams();
-  const pokemons = useSelector((state) => state.pokemon.value);
+  const pokemons = useSelector((state) => state.pokemons.value);
   const [pokemon, setPokemon] = useState(null);
 
   const getPokemonInfo = async () => {
